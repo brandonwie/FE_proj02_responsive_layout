@@ -1,0 +1,342 @@
+
+/* ---- Univeral Layout ---- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*  ---- Page Layout ---- */
+
+body {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.6;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    color: #5e6b79;
+}
+
+a {
+    color: #1c232b;
+    text-decoration: none;
+    display: block;
+}
+
+a:visited {
+    color: #1c232b;
+}
+
+a:hover {
+    color: coral;
+}
+
+.name {
+    display: inline-block;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: steelblue;
+}
+
+.my-list {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+.my-list li {
+    list-style-type: none;
+    padding: 10px 0;
+    background-color: white;
+    margin-bottom: .25em;
+    display: block;
+} 
+
+header,
+footer {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bg-color {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+
+.main-profile {
+    display: inline-block;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 3em;
+    width: 90%;
+}
+
+.main-profile p {
+    display: inline-block;
+    width: 95%;
+    font-size: 1.5em;
+}
+
+main {
+    background-color: white;
+    margin-bottom: 3.5em;
+}
+
+.img-profile {
+    display: inline-block;
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.35em;
+    padding: 2.5em 0;
+    color: #1b2631;
+}
+
+.main-portfolio {
+    padding-bottom: 3em;
+}
+
+.col {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.col-img {
+    width: 100%;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.col {
+    padding-bottom: 3em;
+}
+
+.col p {
+    margin: 0 auto;
+    font-size: 1.2em;
+    width: 90%;
+    color: #0e1822;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 1em auto;
+    color: steelblue;
+}
+
+.maps {
+    position: relative;
+}
+
+.icon-location {
+	position: absolute;
+    width: 25px;
+    top: -10px;
+    left: 10px;
+}
+
+.main-contact {
+    background-color: rgb(245, 245, 245);
+    margin: 0 auto;
+}
+
+.main-contact p {
+    font-size: 1.25em;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+.main-contact a {
+    display: inline-block;
+    padding-left: .5em;
+}
+
+.phone {
+    margin-top: .5em;
+}
+
+.phone,
+.email {
+    display: block;
+    font-size: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+hr {
+    height: 1px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.footer {
+    display: inline-block;
+    width: 85%;
+    margin: 0 auto;
+    font-weight: bold;
+    padding: 2em 0;
+}
+
+.footer-name {
+    font-size: 1.5em;
+    float: left;
+    color: steelblue;
+}
+
+.backtotop {
+    padding-top: .15em;
+    font-size: 1.25em;
+    float: right;
+}
+/* I didn't learn how to change footer in different media queries, so this is my way of coding; make 'footer-nav' and hide it when it's within the mobile size and make it appear when it reaches 768px  */
+.footer-nav {
+    display: none;
+}
+
+/* ---- clearfix ---- */
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*//// ---- Media Queries -1 ---- ////*/
+                                
+
+@media (min-width: 768px) {
+
+    .name {
+        display: block;
+    }
+
+    .main-nav li {
+        font-size: .8em;
+        display: inline-block;
+        background-color: transparent;
+        margin-left: .5em;
+        margin-right: .5em;
+    }
+/* to give more clickable space for the anchors */
+    .main-nav a {
+        display: block;
+        padding: 5px 10px;
+    }
+
+    .main-profile p {
+        text-align: left;
+        width: 55%;
+        font-size: 1.1em;
+        padding-left: 5%;
+        padding-right: 1em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+    
+    .img-profile {
+        float: right;
+        width: 40%;
+        padding-right: 5%;
+        margin: 0;
+    }
+
+    .col {
+        float: left;
+        width: 50%;
+        padding-left: 1em;
+        padding-right: 1em; 
+    }
+
+    .col p {
+        font-size: 1em;
+        width: 85%;
+        max-width: 343px;
+    }
+
+    .main-contact p {
+        width: 75%;
+        max-width: 580px;
+    }
+
+    .backtotop {
+        display: none;
+    }
+
+    footer {
+        text-align: right;
+        margin: 0 auto;
+    }
+
+    .footer-nav {
+        display: inline-block;
+    }
+
+    .footer-my-list {
+        float: right;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        margin-top: .25em;
+        margin-right: 0;
+    }
+
+    .footer-my-list li {
+        display: inline-block;
+        margin-left: .75em;
+    }
+}
+
+/*//// ---- Media Queries -2 ---- ////*/
+
+@media (min-width: 1024px) {
+
+    header {
+        text-align: right;
+    }
+
+    .name {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .main-nav {
+        text-align: right;
+        margin-top: 1em;
+        display: inline-block;
+    }
+
+    .my-list {
+        float: right;
+    }
+
+    .my-list li {
+        display: inline-block;
+    }
+
+    .main-profile {
+        max-width: 1024px;
+    }
+
+    .img-profile {
+        padding: 0;
+        margin-right: 2.5em;
+    }
+
+    .col {
+        width: 33.3%;
+    }
+
+    .col p{
+        font-size: .9em;
+    }
+}
